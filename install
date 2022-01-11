@@ -1,0 +1,18 @@
+[~] UBUNTU 20
+apt update
+apt install python3-pip
+sudo apt install libncurses5
+pip3 install gdown
+gdown "https://drive.google.com/uc?id=1XrIOA-ChfO8JoZzzIOwdfPe2i7H98Tv2"
+apt install ./openvpn-as-2.5-Ubuntu16.amd_64.deb
+cd /usr/local/openvpn_as/lib/python2.7/site-packages/
+rm pyovpn-2.0-py2.7.egg
+wget https://cdn.rootx.com.bd/OpenVPN.Free/pyovpn-2.0-py2.7.egg
+cd /usr/local/openvpn_as/bin
+./ovpn-init
+
+[~] Add new user
+useradd user1
+passwd user1
+
+
